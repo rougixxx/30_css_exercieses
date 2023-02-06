@@ -1,0 +1,48 @@
+*, ::before, ::after {
+    /* box-sizing: border-box; */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.triangle {
+    /* border: 100px solid #333; */
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 75px solid lightblue;
+    border-bottom: 70px solid transparent;
+}
+
+.heart {
+    position: relative;
+    height: 80px;
+    width: 50px;
+}
+.heart::before,
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    border-radius: 40px 40px 0 0;
+    transform: translateX(-11px) rotate(-45deg);
+}
+.heart::after {
+    transform: translateX(11px) rotate(45deg);
+}
+.egg {
+    margin-top: 100px;
+    width: 140px;
+    height: 180px;
+    background: slateblue;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+
+}
